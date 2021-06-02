@@ -25,7 +25,7 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   // get posts from api
-  const res = await fetch("https://blog-strapi-v1.herokuapp.com/posts");
+  const res = await fetch("https://blog-strapi-v2.herokuapp.com/posts");
 
   const posts = await res.json();
 

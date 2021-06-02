@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Layout from "../components/layout/Layout";
 
 export default function Post({ post }) {
@@ -15,7 +14,7 @@ export default function Post({ post }) {
 
 // tell next.js how many pages there are
 export async function getStaticPaths() {
-  const res = await fetch("https://blog-strapi-v1.herokuapp.com/posts");
+  const res = await fetch("https://blog-strapi-v2.herokuapp.com/posts");
 
   const posts = await res.json();
 
@@ -33,7 +32,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params;
 
-  const res = await fetch(`https://blog-strapi-v1.herokuapp.com/posts?Slug=${slug}`);
+  const res = await fetch(`https://blog-strapi-v2.herokuapp.com/posts?Slug=${slug}`);
 
   const data = await res.json();
 
