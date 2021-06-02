@@ -1,0 +1,24 @@
+/* This applies from 0px to 600px */
+
+.main {
+    margin: 2rem 2rem 0 2rem;
+    width: 90%;
+    max-width: 40rem;
+    padding-right: 2rem;
+}
+
+.main p {
+    margin-top: -15px;
+    font-size: 12px;
+}
+
+
+/* This applies from 600px onwards */
+
+@media (min-width: 600px) {
+    .main {
+        margin: 3rem auto 0 auto;
+        width: 90%;
+        max-width: 40rem;
+    }
+}
